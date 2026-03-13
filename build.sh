@@ -4,6 +4,8 @@ set -e
 
 cd $(dirname $0)
 
+npm install
+
 npm ci
 npm run build
 npm run pack
