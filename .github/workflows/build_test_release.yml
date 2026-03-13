@@ -86,4 +86,4 @@ jobs:
           python-version: '3.x'
       - name: Create release
         run: |
-          ./release.py v0
+          ./release.py v1
