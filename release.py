@@ -30,7 +30,7 @@ def main():
   args = parser.parse_args()
   logging.basicConfig(level=args.log_level)
 
-  build_branch = "{args.version}-build"
+  build_branch = f"{args.version}-build"
 
   logging.debug(f"ROOT={ROOT}")
 
