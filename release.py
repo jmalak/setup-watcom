@@ -56,7 +56,7 @@ def main():
       f.close()
 
     logging.debug("Checking out %s", build_branch)
-    subprocess.check_call(["git", "checkout", build_branch], cwd=ROOT)
+    subprocess.check_call(["git", "checkout", "-b", build_branch], cwd=ROOT)
 
     logging.debug("Removing all files from previous releases")
     for item in ROOT.iterdir():
