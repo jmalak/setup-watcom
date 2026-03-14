@@ -11,7 +11,7 @@ import tarfile
 
 ROOT = pathlib.Path(__file__).resolve().parent
 
-VALID_VERSION_SERIES = ("v0", )
+VALID_VERSION_SERIES = ("v0", "v1", )
 RELEASE_FILES = [
   "README.md",
   "LICENSE",
@@ -56,7 +56,7 @@ def main():
       f.close()
 
     logging.debug("Checking out %s", build_branch)
-    subprocess.check_call(["git", "checkout", build_branch], cwd=ROOT)
+    subprocess.check_call(["git", "checkout", "-b", build_branch], cwd=ROOT)
 
     logging.debug("Removing all files from previous releases")
     for item in ROOT.iterdir():
